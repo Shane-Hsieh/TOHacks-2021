@@ -1,12 +1,28 @@
 # this is just boilerplate code from whnat we did last time, modify it
 
 import discord
+from discord.ext import commands
 client = discord.Client()
+
+client = commands.Bot(command_prefix = "!")
 
 #commands
 @client.event
 async def on_ready():
-    general_channel = client.get_channel(812470218106470453) #put client ID here
-    await general_channel.send(hackernews_module.tophn_wrapper(0))
+    general_channel = client.get_channel(805633741166477365) #put client ID here
+    #await general_channel.send(hackernews_module.tophn_wrapper(0))
+    #await general_channel.send('!warn @animated')
 
-client.run('token') #put discord bot token here
+@client.command()
+async def opgg(ctx):
+	await ctx.send('https://op.gg')
+
+@client.command()
+async def warn(ctx):
+    await ctx.send('https://tenor.com/view/discord-meme-spooked-scared-mod-gif-18361254')
+
+@client.command()
+async def args(ctx, arg1, arg2):
+    await bot.say('You sent {} and {}'.format(arg1, arg2))
+
+client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.xVXFwH8_3rmos_V3qsoZnIl3u1k') #put discord bot token here
