@@ -9,7 +9,21 @@ client = commands.Bot(command_prefix = "!")
 async def on_ready():
     general_channel = client.get_channel(805633741166477365) #put client ID here
 
-# warn
+
+#help page
+client.remove_command('help')
+help_page = {
+    '1': "```Page 1 of 2\nwarn\ncringe\nvalorant```",
+    '2': "```Page 2 of 2\nopgg <champ name> <position>\ncounters <champ name> <position>\n"
+         "build <champ name> <position>\nrunes <champ name> <position>\n"
+         "skills <champ name> <position>\nwr <champ name> <position>\nprofile <summoner name>```"
+}
+@client.command()
+async def help(ctx, pgnum):
+    await ctx.send(help_page[pgnum])
+
+
+# other commands
 @client.command()
 async def warn(ctx):
     await ctx.send('https://tenor.com/view/discord-meme-spooked-scared-mod-gif-18361254')
@@ -21,6 +35,7 @@ async def cringe (ctx):
 @client.command()
 async def valorant (ctx):
     await ctx.send('https://tenor.com/view/tf2-virus-computer-team-fortress2-gif-17012348')
+
 
 # op.gg commands
 @client.command()
