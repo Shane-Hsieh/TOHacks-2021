@@ -43,4 +43,8 @@ async def skills(ctx, arg1, arg2):
 async def wr(ctx, arg1, arg2):
     await ctx.send('https://www.op.gg/champion/{}/statistics/{}/trend'.format(arg1, arg2))
 
+@client.command()
+async def profile(ctx, arg1):
+    await ctx.send('https://na.op.gg/summoner/userName={}'.format(arg1))
+
 client.run('') #put discord bot token here
