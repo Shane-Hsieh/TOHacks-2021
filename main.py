@@ -18,6 +18,10 @@ async def warn(ctx):
 async def cringe (ctx):
     await ctx.send('https://tenor.com/view/dies-of-cringe-cringe-gif-20747133')
 
+@client.command()
+async def valorant (ctx):
+    await ctx.send('https://tenor.com/view/tf2-virus-computer-team-fortress2-gif-17012348')
+
 # op.gg commands
 @client.command()
 async def opgg(ctx, arg1, arg2):
