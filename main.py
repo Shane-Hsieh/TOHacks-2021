@@ -13,7 +13,7 @@ async def on_ready():
 #help page
 client.remove_command('help')
 help_page = {
-    '1': "```Page 1 of 2\nwarn\ncringe\nvalorant```",
+    '1': "```Page 1 of 2\nwarn\ncringe\nvalorant\nping```",
     '2': "```Page 2 of 2\nopgg <champ name> <position>\ncounters <champ name> <position>\n"
          "build <champ name> <position>\nrunes <champ name> <position>\n"
          "skills <champ name> <position>\nwr <champ name> <position>\nprofile <summoner name>```"
@@ -35,6 +35,10 @@ async def cringe (ctx):
 @client.command()
 async def valorant (ctx):
     await ctx.send('https://tenor.com/view/tf2-virus-computer-team-fortress2-gif-17012348')
+
+@client.command()
+async def ping(ctx):
+	await ctx.send(f'{round(client.latency * 1000)} ms')
 
 
 # op.gg commands
