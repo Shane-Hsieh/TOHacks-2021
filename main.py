@@ -14,6 +14,9 @@ async def on_ready():
 async def warn(ctx):
     await ctx.send('https://tenor.com/view/discord-meme-spooked-scared-mod-gif-18361254')
 
+@client.command()
+async def cringe (ctx):
+    await ctx.send('https://tenor.com/view/dies-of-cringe-cringe-gif-20747133')
 
 # op.gg commands
 @client.command()
@@ -40,4 +43,4 @@ async def skills(ctx, arg1, arg2):
 async def wr(ctx, arg1, arg2):
     await ctx.send('https://www.op.gg/champion/{}/statistics/{}/trend'.format(arg1, arg2))
 
-client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.zqeAgsq-JMAL6Q22FcmQ3Wo4r_M') #put discord bot token here
+client.run('') #put discord bot token here

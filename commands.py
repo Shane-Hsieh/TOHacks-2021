@@ -10,6 +10,6 @@ async def ping(ctx):
 
 @client.command()
 async def jerome(ctx):
-	await ctx.send('my bad OG 😩')
+	await ctx.send('but whyyyyy 😩')
 
 client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.ZO_LkLsaKwoJrl8XcrSqHiXG80s')
