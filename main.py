@@ -6,7 +6,8 @@ client = discord.Client()
 #commands
 @client.event
 async def on_ready():
-    general_channel = client.get_channel(812470218106470453) #put client ID here
-    await general_channel.send(hackernews_module.tophn_wrapper(0))
+    general_channel = client.get_channel(ClientID) #put client ID here
+    await general_channel.send('@EGG')
 
-client.run('token') #put discord bot token here
+client.run('Token') #put discord bot token here
+
