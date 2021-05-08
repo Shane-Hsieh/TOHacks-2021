@@ -44,7 +44,8 @@ async def ping(ctx):
 # op.gg commands
 @client.command()
 async def opgg(ctx, arg1, arg2):
-	await ctx.send('https://www.op.gg/champion/{}/statistics/{}'.format(arg1, arg2))
+    await ctx.send('https://www.op.gg/champion/{}/statistics/{}'.format(arg1, arg2))
+    await ctx.send(file=discord.File(arg1 + '.png'))
 
 @client.command()
 async def counters(ctx, arg1, arg2):
@@ -70,4 +71,4 @@ async def wr(ctx, arg1, arg2):
 async def profile(ctx, arg1):
     await ctx.send('https://na.op.gg/summoner/userName={}'.format(arg1))
 
-client.run('') #put discord bot token here
+client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.mYabsGa352w2w7KCkM8Nkjm4FyY') #put discord bot token here
