@@ -17,7 +17,7 @@ async def opgg(ctx):
 
 @client.command()
 async def warn(ctx):
-    await ctx.send('Bruh')
+    await ctx.send('https://tenor.com/view/discord-meme-spooked-scared-mod-gif-18361254')
 
 @client.command()
 async def cringe (ctx):
