@@ -1,5 +1,3 @@
-# this is just boilerplate code from whnat we did last time, modify it
-
 import discord
 from discord.ext import commands
 #client = discord.Client()
@@ -13,8 +11,8 @@ async def on_ready():
 #help page
 client.remove_command('help')
 help_page = {
-    '1': "```Page 1 of 2\nwarn\ncringe\nvalorant\nping```",
-    '2': "```Page 2 of 2\nopgg <champ name> <position>\ncounters <champ name> <position>\n"
+    '1': "```Page 1 of 2\n-------------\nwarn\ncringe\nvalorant\nping```",
+    '2': "```Page 2 of 2\n-------------\nopgg <champ name> <position>\ncounters <champ name> <position>\n"
          "build <champ name> <position>\nrunes <champ name> <position>\n"
          "skills <champ name> <position>\nwr <champ name> <position>\nprofile <summoner name>```"
 }
@@ -45,7 +43,7 @@ async def ping(ctx):
 @client.command()
 async def opgg(ctx, arg1, arg2):
     await ctx.send('https://www.op.gg/champion/{}/statistics/{}'.format(arg1, arg2))
-    await ctx.send(file=discord.File(arg1 + '.png'))
+    await ctx.send(file=discord.File('./images/'+ arg1 + '.png'))
 
 @client.command()
 async def counters(ctx, arg1, arg2):
@@ -71,4 +69,4 @@ async def wr(ctx, arg1, arg2):
 async def profile(ctx, arg1):
     await ctx.send('https://na.op.gg/summoner/userName={}'.format(arg1))
 
-client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.mYabsGa352w2w7KCkM8Nkjm4FyY') #put discord bot token here
+client.run('') #put discord bot token here
