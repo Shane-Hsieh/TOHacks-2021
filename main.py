@@ -5,7 +5,10 @@ client = commands.Bot(command_prefix = "!")
 
 @client.event
 async def on_ready():
-    general_channel = client.get_channel(805633741166477365) #put client ID here
+    general_channel = client.get_channel(220676182524297217) #put client ID here+
+
+#chegg study group channel id: 805633741166477365
+#nema general channel id: 220676182524297217
 
 
 #help page
@@ -14,7 +17,8 @@ help_page = {
     '1': "```Page 1 of 2\n-------------\nwarn\ncringe\nvalorant\nping```",
     '2': "```Page 2 of 2\n-------------\nopgg <champ name> <position>\ncounters <champ name> <position>\n"
          "build <champ name> <position>\nrunes <champ name> <position>\n"
-         "skills <champ name> <position>\nwr <champ name> <position>\nprofile <summoner name>```"
+         "skills <champ name> <position>\nwr <champ name> <position>\nmult <summoner names separated by spaces>\n"
+         "profile <summoner name>```"
 }
 @client.command()
 async def help(ctx, pgnum):
@@ -69,4 +73,14 @@ async def wr(ctx, arg1, arg2):
 async def profile(ctx, arg1):
     await ctx.send('https://na.op.gg/summoner/userName={}'.format(arg1))
 
-client.run('') #put discord bot token here
+@client.command()
+async def mult(ctx, *args):
+    msearch = ''
+    for i in args:
+        msearch += i
+        msearch += '%2C%20'
+    msearch = msearch.removesuffix('%2C%20') #removing the last %2C%20
+    await ctx.send('https://na.op.gg/multi/query='+ msearch)
+
+
+client.run('ODQwNjIxMTQ2MDgzOTUwNjIy.YJa3cw.NQ6PAWp0fk1OC5XXFaLERYRtADA') #put discord bot token here
